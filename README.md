@@ -31,5 +31,7 @@ app
 })
 ```
 
+All functions are using camel-cased names. for instance `notFound`, `internalServerError` and `created`.
+
 ## License
 MIT
