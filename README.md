@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/brenolf/pretty-response/badge.svg?branch=master&service=github)](https://coveralls.io/github/brenolf/pretty-response?branch=master)
 [![Code Climate](https://codeclimate.com/github/brenolf/pretty-response/badges/gpa.svg)](https://codeclimate.com/github/brenolf/pretty-response)
 [![npm version](https://badge.fury.io/js/pretty-response.svg)](http://badge.fury.io/js/pretty-response)
-> Express middleware that exposes function to work with HTTP status codes
+> Express middleware that exposes functions to work with HTTP status codes
 
 Pretty Response exposes all HTTP codes as functions on response as a middleware. So you can plug it wherever you want to and have a more expressive code than using standard `response.status(CODE)`.
 
@@ -20,18 +20,18 @@ var app = express()
 	.use(pretty)
 ```
 
-Or you can use specifically on the routes you want.
+Or you can use specifically on the routes you want to.
 
 Then you can use descriptive names as functions to create [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) specific response:
 
 ```js
 app
-.get('/', pretty, function (req, res, next) {
+.get('/', function (req, res, next) {
 	res.ok().send()
 })
 ```
 
-All functions are using camel-cased names. for instance `notFound`, `internalServerError` and `created`.
+All functions are using camel-cased names. For instance `notFound`, `internalServerError` and `created`. It's easier if you take a look at the [the codes file](./lib/pretty-response/codes.js).
 
 ## License
 MIT

@@ -1,7 +1,7 @@
 {
   "name": "pretty-response",
-  "version": "1.0.0",
-  "description": "Express middleware that exposes function to work with HTTP status codes",
+  "version": "1.0.1",
+  "description": "Express middleware that exposes functions to work with HTTP status codes",
   "main": "./index",
   "scripts": {
     "test": "npm run lint && npm run mocha",
