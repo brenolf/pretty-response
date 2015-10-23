@@ -1,0 +1,50 @@
+{
+  "name": "pretty-response",
+  "version": "1.0.0",
+  "description": "Express middleware that exposes function to work with HTTP status codes",
+  "main": "./index",
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha -- --opts mocha.opts --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha -- --opts mocha.opts",
+    "mocha": "./node_modules/.bin/_mocha --opts mocha.opts",
+    "lint": "jshint --reporter=node_modules/jshint-stylish lib test; jscs lib test; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brenolf/pretty-response.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "responses",
+    "response",
+    "http",
+    "methods",
+    "handler",
+    "helpers",
+    "codes",
+    "status"
+  ],
+  "author": "Breno Lima de Freitas <brenolimadefreitas@gmail.com> (https://breno.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brenolf/pretty-response/issues"
+  },
+  "homepage": "https://github.com/brenolf/pretty-response",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.4",
+    "jscs": "^2.0.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "^1.0.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "strip-json-comments": "^1.0.4",
+    "yargs": "^3.22.2"
+  }
+}

@@ -1,0 +1,4 @@
+*.publish
+build
+node_modules
+coverage
